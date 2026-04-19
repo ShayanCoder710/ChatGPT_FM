@@ -18,7 +18,7 @@ bot = Robot(token)
 @bot.on_message(filters=filters.text_equals("/start"))
 async def start_dege_zayas(_: Robot, message: Message): 
 
-    await message.reply("سلام ربات هوش مصنوعی chatgpt_FM فعال شد🤖\nهر سوالی دارید بپرسید")
+    await message.reply("سلام ربات هوش مصنوعی chatGPT_FM فعال شد🤖\nهر سوالی دارید بپرسید")
     
 
 @bot.on_message()
@@ -29,6 +29,7 @@ async def ai_response(_: Robot, message: Message):
     response = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[{"role" : "user", "content" : user_text}]
+        {"role": "system", "content": "اسم تو 'mohammad یا محمد ' هست و یک . همیشه با همه دوستانه حرف بزن"},
     )
 
 
