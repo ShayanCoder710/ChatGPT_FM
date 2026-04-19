@@ -14,7 +14,7 @@ bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands = ['start'])
 def start(message):
-    bot.reply_to(message , "سلام ربات هوش مصنوعی chatgpt_FM فعال شد🤖\nهر سوالی دارید بپرسید")
+    bot.reply_to(message , "سلام ربات هوش مصنوعی chatGPT_FM فعال شد🤖\nهر سوالی دارید بپرسید")
 
 
 @bot.message_handler(func=lambda m : True)
