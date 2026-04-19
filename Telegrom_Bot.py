@@ -24,6 +24,7 @@ def reply(message):
 
     response = client.chat.completions.create(
         model="gpt-4o-mini",
+        {"role": "system", "content": "اسم تو 'shayan یا شایان ' هست و یک . همیشه با همه دوستانه حرف بزن"},
         messages=[{"role" : "user", "content" : user_text}]
     )
 
